@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AETC APPS | POM Issue</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/pomissue/style.css">
+    <script src="../js/lorem.js"></script>
+    <script src="../js/pomissue/code.js"></script>
+    <script src="https://kit.fontawesome.com/f30a0e0a9d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container w-75 pt-5">
+        <div class="row">
+            <div class="col">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-save"></i></button>
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-trash"></i></button>
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-sync"></i></button>
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-print"></i></button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Fourth group">
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-exclamation-triangle"></i>
+                        </button>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="btnGroupAddon">Exercise</div>
+                        </div>
+                        <select class="form-control" placeholder="Input group example" aria-label="Input group example"
+                                aria-describedby="btnGroupAddon">
+                            <option>FY22 POM</option>
+                            <option>FY21 PB</option>
+                            <option>FY21 BES</option>
+                            <option>FY21 POM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col">
+                <h1 class="align-middle">POM Issues</h1>
+                <button id="showTableButton"
+                        class="btn btn-outline-secondary align-middle" type="button" data-toggle="collapse"
+                        data-target="#issueTable" aria-expanded="false" aria-controls="issueTable">
+                    <i id="showTableIcon" class="fas fa-angle-double-up"></i>
+                </button>
+            </div>
+        </div>
+        <div id="issueTable" class="collapse">
+            <div class="row">
+                <div class="col py-3">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Level</th>
+                            <th>Cat Rank</th>
+                            <th>Category</th>
+                            <th>A8PP Rank</th>
+                            <th>PE</th>
+                            <th>AETC Panel</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="0">
+                            <td>(M) Fund LeMay CWPC Positions</td>
+                            <td>CORP</td>
+                            <td>1</td>
+                            <td>ZBT</td>
+                            <td>3</td>
+                            <td>84752F</td>
+                            <td>Education</td>
+                        </tr>
+                        <tr id="1">
+                            <td>(ZBT) PCE Realignment Actions</td>
+                            <td>CORP</td>
+                            <td>1</td>
+                            <td>ZBT</td>
+                            <td>37</td>
+                            <td>84752F</td>
+                            <td>Education</td>
+                        </tr>
+                        <tr id="2">
+                            <td>(ZBT) Align UPT2.5 baseline</td>
+                            <td>CORP</td>
+                            <td>1</td>
+                            <td>ZBT</td>
+                            <td>999</td>
+                            <td>84747F</td>
+                            <td>Flying Training</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row card">
+            <div class="col py-3 card-body">
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="title">Title*</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="panel">Panel*</label>
+                        <select class="form-control" id="panel">
+                            <option>Communications & Information</option>
+                            <option>Education</option>
+                            <option>Flying Training</option>
+                            <option>Force Development</option>
+                            <option>Installation Support</option>
+                            <option>Medical</option>
+                            <option>Recruiting</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="pe">PE*</label>
+                        <select class="form-control" id="pe">
+                            <option>27256F | UCAV JOINT PRG OFFICE</option>
+                            <option>27268F | AIRCRAFT ENGINE COMPONENT IMP PROG</option>
+                            <option>27277F | ISR INNOVATIONS</option>
+                            <option>27313F | MAVERICK</option>
+                            <option>84747F | UNDERGRADUATE PILOT TNG (UPT) ROTARY</option>
+                            <option>84752F | OTHER PROFESSIONAL EDUCATION</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                            <span>
+                                Last changed by <span id="lastChangedBy">(None)</span>
+                                <button class="btn btn-outline-secondary btn-sm" id="viewPerson" disabled><i
+                                        class="far fa-user"></i></button>
+                                <span id="lastChangedDate"></span>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-3">
+                <ul class="nav nav-tabs" id="pomIssueTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#general">General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rapids">RAPIDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trichart">Tri-Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#assessment">Assessment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bbp">BBP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deltas">Deltas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#currentprogram">Current Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#attachments">Attachments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coordination">Coordination</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="majcom">Major Command*</label>
+                                        <select class="form-control" id="majcom">
+                                            <option>AETC</option>
+                                            <option>AF CYBER</option>
+                                            <option>AFMC</option>
+                                            <option>AFSOC</option>
+                                            <option>AIRSTAFF</option>
+                                            <option>HAF</option>
+                                            <option>USAFA</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="seriestype">Series Type*</label>
+                                        <select class="form-control" id="seriestype">
+                                            <option>Disconnects (Broken glass)</option>
+                                            <option>Initiatives</option>
+                                            <option>Offsets</option>
+                                            <option>Zero Balance Transfers</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="asgnuser">Assigned User*</label>
+                                        <select class="form-control" id="asgnuser">
+                                            <option>Read, Stacy Contractor</option>
+                                            <option>Raven, Robert Contractor</option>
+                                            <option>Williams, George Contractor</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="category">Category*</label>
+                                        <select class="form-control" id="category">
+                                            <option>Planning Choice</option>
+                                            <option>ZBT</option>
+                                            <option>Balanced Sub</option>
+                                            <option>Unfunded Sub</option>
+                                            <option>Offset</option>
+                                            <option>Not Forwarded</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="round">Round*</label>
+                                        <select class="form-control" id="round">
+                                            <option>1) Round 1</option>
+                                            <option>2) Round 2</option>
+                                            <option>3) Round 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="afpanel">AF Panel</label>
+                                        <input type="text" class="form-control" id="afpanel" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="notes">Notes & Documents</label>
+                                        <textarea class="form-control" id="notes" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="rapids" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="background">Background*</label>
+                                        <textarea class="form-control" id="background" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="adjustment">Adjustment*</label>
+                                        <textarea class="form-control" id="adjustment" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="impact">Impact*</label>
+                                        <textarea class="form-control" id="impact" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="trichart" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="rqmtsimpacts">Requirements/Impacts</label>
+                                        <textarea class="form-control" id="rqmtsimpacts" rows="2" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="histexecution">Historical Execution</label>
+                                        <textarea class="form-control" id="histexecution" rows="2" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="mpwrjust">Manpower Justification</label>
+                                        <textarea class="form-control" id="mpwrjust" rows="2" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="acqprgm">Acquisition Program Milestones</label>
+                                        <textarea class="form-control" id="acqprgm" rows="2" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="specificguidance">Specific Guidance</label>
+                                        <textarea class="form-control" id="specificguidance" rows="2" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="assessment" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bbp" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="purpose">Purpose*</label>
+                                        <textarea class="form-control" id="purpose" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="discussion">Discussion*</label>
+                                        <textarea class="form-control" id="discussion" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="summary">Summary*</label>
+                                        <textarea class="form-control" id="summary" rows="3" cols="500">
+                                            </textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="deltas" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="currentprogram" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="coordination" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row card">
+                            <div class="col card-body">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
