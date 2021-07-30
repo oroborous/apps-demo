@@ -334,6 +334,46 @@
                     <div class="tab-pane fade" id="assessment" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row card">
                             <div class="col card-body">
+                                <div class="form-group">
+                                    <label for="prod-sev">Production Impact</label>
+                                    <select id="prod-sev" class="form-control">
+                                        <option>High (>20%)</option>
+                                        <option>Moderate (10-20%)</option>
+                                        <option>Low (1-10%)</option>
+                                        <option>None (0%)</option>
+                                    </select>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fin-risk-sev">Financial Risk</label>
+                                    <select id="fin-risk-sev" class="form-control">
+                                        <option>High (>$10M)</option>
+                                        <option>Moderate ($3M to $10M)</option>
+                                        <option>Low ($1M to $3M)</option>
+                                        <option>None ($0M to $1M)</option>
+                                    </select>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mitigation-sev">Mitigation Potential</label>
+                                    <select id="mitigation-sev" class="form-control">
+                                        <option>None</option>
+                                        <option>Partial</option>
+                                        <option>Significant</option>
+                                        <option>Total</option>
+                                    </select>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="req-src-sev">Requirement Source</label>
+                                    <select id="req-src-sev" class="form-control">
+                                        <option>Congressional</option>
+                                        <option>HAF/DoD/COCOM</option>
+                                        <option>MAJCOM</option>
+                                        <option>None/Other</option>
+                                    </select>
+                                    <textarea class="form-control"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -369,24 +409,143 @@
                     <div class="tab-pane fade" id="deltas" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row card">
                             <div class="col card-body">
+                                <table class="table table-striped" id="delta-table">
+                                    <thead>
+                                    <tr>
+                                        <th>PE</th>
+                                        <th>APPN</th>
+                                        <th>COSTCAT</th>
+                                        <th>WSC</th>
+                                        <th>AF Program</th>
+                                        <th>OAC</th>
+                                        <th>SFI</th>
+                                        <th class="fydp-year-header text-right">2023</th>
+                                        <th class="fydp-year-header text-right">2024</th>
+                                        <th class="fydp-year-header text-right">2025</th>
+                                        <th class="fydp-year-header text-right">2026</th>
+                                        <th class="fydp-year-header text-right">2027</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="currentprogram" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row card">
                             <div class="col card-body">
+                                <div class="form-group">
+                                    <label for="cp-source">Source</label>
+                                    <select id="cp-source" class="form-control">
+                                        <option>O&M - Civ Pay & 595XX (Competitive Sourcing Activities)</option>
+                                        <option>PE</option>
+                                        <option>PE/APPN</option>
+                                        <option>PE/APPN/COSTCAT</option>
+                                        <option>PE/APPN/AF Program</option>
+                                        <option>User Defined</option>
+                                    </select>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th class="exec-year-header text-right">2021</th>
+                                        <th class="exec-year-header text-right">2022</th>
+                                        <th class="fydp-year-header text-right">2023</th>
+                                        <th class="fydp-year-header text-right">2024</th>
+                                        <th class="fydp-year-header text-right">2025</th>
+                                        <th class="fydp-year-header text-right">2026</th>
+                                        <th class="fydp-year-header text-right">2027</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td id="cp-source-td">O&M - Civ Pay & 252XX (Competitive Sourcing Activities)
+                                        </td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                        <td class="cp-amount text-right"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-group">
+                                    <label for="cp-comments">Comments</label>
+                                    <textarea class="form-control" id="cp-comments"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row card">
                             <div class="col card-body">
+                                <div class="btn-group-sm mr-2" role="group" aria-label="Attachments group">
+                                    <button type="button" class="btn btn-secondary"><i class="fas fa-paperclip"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary"><i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary"><i class="fas fa-download"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary"><i class="fas fa-filter"></i>
+                                    </button>
+                                </div>
+                                <div>&nbsp;</div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Used</th>
+                                        <th>File Type</th>
+                                        <th>Size</th>
+                                        <th>Uploaded By</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>(U) AFG Tri-Chart Slides</td>
+                                        <td>1 time</td>
+                                        <td>PPTX</td>
+                                        <td>188.5 kB</td>
+                                        <td>Gannon, Kevin GS-13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>070820-F-4406L-002.jpeg</td>
+                                        <td>5 times</td>
+                                        <td>JPEG</td>
+                                        <td>172.2 kB</td>
+                                        <td>Davis, Chris GS-13</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="coordination" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row card">
                             <div class="col card-body">
+                                <div class="form-group underline">
+                                    <label for="fac-coord">Facilities Coordinator Comments</label>
+                                    <textarea id="fac-coord" class="form-control"></textarea>
+                                    <button class="btn btn-secondary coord-btn">Request Coordination</button>
+                                </div>
+                                <div class="form-group underline">
+                                    <label for="info-tech-coord">Information Technology Coordinator Comments</label>
+                                    <textarea id="info-tech-coord" class="form-control"></textarea>
+                                    <button class="btn btn-secondary coord-btn">Request Coordination</button>
+                                </div>
+                                <div class="form-group underline">
+                                    <label for="mpwr-coord">Manpower Coordinator Comments</label>
+                                    <textarea id="mpwr-coord" class="form-control"></textarea>
+                                    <button class="btn btn-secondary coord-btn">Request Coordination</button>
+                                </div>
+                                <div class="form-group underline">
+                                    <label for="support-coord">Support Coordinator Comments</label>
+                                    <textarea id="support-coord" class="form-control"></textarea>
+                                    <button class="btn btn-secondary coord-btn">Request Coordination</button>
+                                </div>
                             </div>
                         </div>
                     </div>

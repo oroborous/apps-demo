@@ -10,3 +10,20 @@ h1 {
 body {
     background-color: #eee;
 }
+
+.fydp-year-header {
+    background-color: #9fcdff;
+}
+
+.exec-year-header {
+    background-color: #28a745;
+}
+
+.underline {
+
+}
+
+.coord-btn {
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
